@@ -1,15 +1,13 @@
 appName: myhelmapp
 
-ngnixservice: nginx-service
-
 configmap:
   name: myhelmapp-configmap-v1
   data:
     CUSTOM_HEADER: 'This app was deployed with helm!'
 
 image:
-  name: balaji/359114-helm-webapp
-  tag: v1.0
+  name: balaji/webapp
+  tag: 34
 
 service:
   type: ClusterIP
