@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGINX on ROSA</title>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <script>
+        document.getElementById("welcome").innerHTML = "Loading Welcome Message...";
+        fetch('/env')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("welcome").innerHTML = data.WELCOME_MSG;
+        });
+    </script>
+</body>
+</html>
