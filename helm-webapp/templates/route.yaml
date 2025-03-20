@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ .Values.ngnixservice }}-route
+  labels:
+    app: {{ .Values.ngnixservice }}
+    environment: dev
+spec:
+  to:
+    kind: Service
+    name: {{ .Values.appName }}
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
