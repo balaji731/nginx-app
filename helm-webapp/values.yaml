@@ -6,7 +6,7 @@ configmap:
     CUSTOM_HEADER: 'This app was deployed with helm!'
 
 image:
-  name: balaji/webapp
+  name: nginx
   tag: 34
 
 service:
